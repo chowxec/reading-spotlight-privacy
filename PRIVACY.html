@@ -1,0 +1,59 @@
+# Privacy Policy
+
+Reading Spotlight is a Chrome extension that improves reading focus on the
+active web page. It runs locally in the browser and does not send page content,
+current-tab URLs or hostnames, browsing activity, settings, or reading progress
+to any external server.
+
+## Data Processed Locally
+
+After a user action, such as opening the popup, using the keyboard shortcut, or
+choosing the context menu item, Reading Spotlight reads the active tab's page
+structure and visible text so it can place the focus layer, reading ruler,
+progress indicator, and typography controls. It also uses the active tab's URL
+and hostname to determine whether the site is excluded and, when reading
+progress saving is enabled, to create a hashed page key.
+
+This processing happens locally in the browser. Reading Spotlight does not
+monitor background tabs and does not transmit page content or browsing activity.
+
+## Data Stored by the Extension
+
+Reading Spotlight stores two kinds of data:
+
+- Synced settings: visual preferences such as focus mode, overlay opacity, typography, dark mode, safe mode, and reading aid toggles are stored with `chrome.storage.sync`.
+- Local-only data: excluded hostnames and optional reading progress are stored with `chrome.storage.local` on the current browser profile.
+
+Reading progress is off by default. When enabled, Reading Spotlight stores a hashed page key, focused block index, short text hash, scroll position, timestamp, and whether the page used text-node grouping. This data is used only to restore the last focused block when the user revisits a page. Progress older than 24 hours is ignored.
+
+## Data Not Transmitted or Used for Tracking
+
+Reading Spotlight does not sell, transmit, or share:
+
+- Full page content
+- Personal information entered into forms
+- Account information
+- Analytics or telemetry events
+- A browsing history or cross-site activity profile
+
+Excluded hostnames are stored only when the user chooses to exclude a site.
+Optional reading progress stores hashed page keys rather than full URLs, stays
+on the current browser profile, and is used only for the reading progress
+feature.
+
+Data handled by Reading Spotlight is used only for the user-facing reading
+focus features described in the extension and Chrome Web Store listing. It is
+not transferred or sold to third parties, used for advertising, or reviewed by
+humans.
+
+## Permissions
+
+Reading Spotlight uses `activeTab` and `scripting` to inject the reading layer only after a user action on the current tab. It uses `storage` to save user preferences and optional local progress. It uses `contextMenus` to provide a toggle command from the page context menu.
+
+## User Controls
+
+Users can open the extension options page to clear reading progress, clear excluded sites, or reset settings. Users can also disable reading progress from the popup settings.
+
+## Contact
+
+For support or privacy questions, contact chowxec.extensions@gmail.com.
